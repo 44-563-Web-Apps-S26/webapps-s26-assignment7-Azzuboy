@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Azzuboy builds list with divs</title>
+  <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style>
+</head>
+
+<body>
+  <h2>Azzuboy builds list with divs</h2>
+
+  <div class="flex-container" id="target">
+    <div class="divlist">row item 1</div>
+    <div class="divlist">row item 2</div>
+    <div class="divlist">row item 3</div>
+  </div>
+
+  <p>Press the button to create a new element of type div and then add it to the container.</p>
+
+  <input type="text" id="divInput">
+  <button onclick="makeNewDiv()">Add end</button>
+  <button onclick="addFront()">Add front</button>
+  <button onclick="remove()">Remove</button>
+</body>
+<script>
+  function makeNewDiv() {
+    /* make the div and its text */
+    let element = document.createElement("div")
+    element.innerHTML = document.getElementById("divInput").value
+    element.className = "divlist"
+
+    /* add it to the container */
+    let container = document.getElementById("target")
+    container.appendChild(element)
+  }
+
+  function addFront() {
+    let element = document.createElement("div")
+    element.innerHTML = document.getElementById("divInput").value
+    element.className = "divlist"
+
+    let container = document.getElementById("target")
+    container.insertBefore(element, container.firstChild)
+  }
+
+  function remove() {
+    let divListItems = document.getElementsByClassName("divlist")
+    let length = divListItems.length
+
+    if (length === 0) {
+      return
+    }
+
+    if (length > 1) {
+      divListItems[1].remove()
+    } else {
+      divListItems[0].remove()
+    }
+  }
+</script>
+</html>	
