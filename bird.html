@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -50,58 +50,201 @@
         <p>Click on the locations to find the birds, watch out for the forbidden statue</p>
         <p id="locations">Number of locations checked is zero.</p>
         <p id="score">Score is zero.</p>
-        <p>Click for help.</p>
+        <p id="helpTrigger" onclick="help()" role="button">Click for help.</p>
         <p id="help">Help report</p>
 
         <div class="game-field" aria-label="Bird hunt game field">
           <div class="game-row">
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
+            <div class="location"><img id="loc0" src="images/bush.svg" alt="Bush location" onclick="check(0)"></div>
+            <div class="location"><img id="loc1" src="images/bush.svg" alt="Bush location" onclick="check(1)"></div>
+            <div class="location"><img id="loc2" src="images/bush.svg" alt="Bush location" onclick="check(2)"></div>
+            <div class="location"><img id="loc3" src="images/bush.svg" alt="Bush location" onclick="check(3)"></div>
+            <div class="location"><img id="loc4" src="images/bush.svg" alt="Bush location" onclick="check(4)"></div>
+            <div class="location"><img id="loc5" src="images/bush.svg" alt="Bush location" onclick="check(5)"></div>
+            <div class="location"><img id="loc6" src="images/bush.svg" alt="Bush location" onclick="check(6)"></div>
           </div>
           <div class="game-row">
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
+            <div class="location"><img id="loc7" src="images/bush.svg" alt="Bush location" onclick="check(7)"></div>
+            <div class="location"><img id="loc8" src="images/bush.svg" alt="Bush location" onclick="check(8)"></div>
+            <div class="location"><img id="loc9" src="images/bush.svg" alt="Bush location" onclick="check(9)"></div>
+            <div class="location"><img id="loc10" src="images/bush.svg" alt="Bush location" onclick="check(10)"></div>
+            <div class="location"><img id="loc11" src="images/bush.svg" alt="Bush location" onclick="check(11)"></div>
+            <div class="location"><img id="loc12" src="images/bush.svg" alt="Bush location" onclick="check(12)"></div>
+            <div class="location"><img id="loc13" src="images/bush.svg" alt="Bush location" onclick="check(13)"></div>
           </div>
           <div class="game-row">
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
+            <div class="location"><img id="loc14" src="images/bush.svg" alt="Bush location" onclick="check(14)"></div>
+            <div class="location"><img id="loc15" src="images/bush.svg" alt="Bush location" onclick="check(15)"></div>
+            <div class="location"><img id="loc16" src="images/bush.svg" alt="Bush location" onclick="check(16)"></div>
+            <div class="location"><img id="loc17" src="images/bush.svg" alt="Bush location" onclick="check(17)"></div>
+            <div class="location"><img id="loc18" src="images/bush.svg" alt="Bush location" onclick="check(18)"></div>
+            <div class="location"><img id="loc19" src="images/bush.svg" alt="Bush location" onclick="check(19)"></div>
+            <div class="location"><img id="loc20" src="images/bush.svg" alt="Bush location" onclick="check(20)"></div>
           </div>
           <div class="game-row">
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
+            <div class="location"><img id="loc21" src="images/bush.svg" alt="Bush location" onclick="check(21)"></div>
+            <div class="location"><img id="loc22" src="images/bush.svg" alt="Bush location" onclick="check(22)"></div>
+            <div class="location"><img id="loc23" src="images/bush.svg" alt="Bush location" onclick="check(23)"></div>
+            <div class="location"><img id="loc24" src="images/bush.svg" alt="Bush location" onclick="check(24)"></div>
+            <div class="location"><img id="loc25" src="images/bush.svg" alt="Bush location" onclick="check(25)"></div>
+            <div class="location"><img id="loc26" src="images/bush.svg" alt="Bush location" onclick="check(26)"></div>
+            <div class="location"><img id="loc27" src="images/bush.svg" alt="Bush location" onclick="check(27)"></div>
           </div>
           <div class="game-row">
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
-            <div class="location"><img src="images/bush.svg" alt="Bush location"></div>
+            <div class="location"><img id="loc28" src="images/bush.svg" alt="Bush location" onclick="check(28)"></div>
+            <div class="location"><img id="loc29" src="images/bush.svg" alt="Bush location" onclick="check(29)"></div>
+            <div class="location"><img id="loc30" src="images/bush.svg" alt="Bush location" onclick="check(30)"></div>
+            <div class="location"><img id="loc31" src="images/bush.svg" alt="Bush location" onclick="check(31)"></div>
+            <div class="location"><img id="loc32" src="images/bush.svg" alt="Bush location" onclick="check(32)"></div>
+            <div class="location"><img id="loc33" src="images/bush.svg" alt="Bush location" onclick="check(33)"></div>
+            <div class="location"><img id="loc34" src="images/bush.svg" alt="Bush location" onclick="check(34)"></div>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    const ids = [
+      "loc0",
+      "loc1",
+      "loc2",
+      "loc3",
+      "loc4",
+      "loc5",
+      "loc6",
+      "loc7",
+      "loc8",
+      "loc9",
+      "loc10",
+      "loc11",
+      "loc12",
+      "loc13",
+      "loc14",
+      "loc15",
+      "loc16",
+      "loc17",
+      "loc18",
+      "loc19",
+      "loc20",
+      "loc21",
+      "loc22",
+      "loc23",
+      "loc24",
+      "loc25",
+      "loc26",
+      "loc27",
+      "loc28",
+      "loc29",
+      "loc30",
+      "loc31",
+      "loc32",
+      "loc33",
+      "loc34"
+    ];
+    let score = 0;
+    let locationsVisited = 0;
+    let lastLocation = 0;
+    const statueLocation = 19;
+    const toucanLocation = 14;
+    const lorikeetLocations = [3, 25];
+    const buntingLocations = [2, 5, 11, 20, 21];
+    let gameOver = false;
+
+    const rows = 5;
+    const cols = 7;
+
+    function updateScoreboard() {
+      document.getElementById("locations").textContent =
+        `Number of locations checked is ${locationsVisited}.`;
+      document.getElementById("score").textContent = `Score is ${score}.`;
+    }
+
+    function check(position) {
+      if (gameOver) {
+        return;
+      }
+
+      const imageId = ids[position];
+      const image = document.getElementById(imageId);
+      if (!image) {
+        return;
+      }
+
+      let revealed = false;
+      if (position === statueLocation) {
+        image.src = "images/golden-statue.svg";
+        image.onclick = null;
+        revealed = true;
+        score -= 3;
+        gameOver = true;
+      } else if (position === toucanLocation) {
+        image.src = "images/toucan.svg";
+        image.onclick = null;
+        revealed = true;
+        score += 5;
+      } else if (lorikeetLocations.includes(position)) {
+        image.src = "images/lorikeet.svg";
+        image.onclick = null;
+        revealed = true;
+        score += 3;
+      } else if (buntingLocations.includes(position)) {
+        image.src = "images/bunting.svg";
+        image.onclick = null;
+        revealed = true;
+        score += 1;
+      }
+
+      locationsVisited += 1;
+      image.alt = revealed ? "Found location" : "Checked location";
+      image.setAttribute("title", revealed ? "Found location" : "Checked location");
+      lastLocation = position;
+      updateScoreboard();
+    }
+
+    function help() {
+      const row = Math.floor(lastLocation / cols);
+      const col = lastLocation % cols;
+
+      const leftCol = col === 0 ? cols - 1 : col - 1;
+      const rightCol = col === cols - 1 ? 0 : col + 1;
+      const upRow = row === 0 ? rows - 1 : row - 1;
+      const downRow = row === rows - 1 ? 0 : row + 1;
+
+      const buntingNeighbors = [
+        row * cols + leftCol,
+        row * cols + rightCol,
+        upRow * cols + col,
+        downRow * cols + col
+      ];
+
+      if (buntingNeighbors.some((loc) => buntingLocations.includes(loc))) {
+        document.getElementById("help").textContent = "cheep";
+        return;
+      }
+
+      const nineNeighbors = [];
+      for (let r = row - 1; r <= row + 1; r += 1) {
+        for (let c = col - 1; c <= col + 1; c += 1) {
+          if (r < 0 || r >= rows || c < 0 || c >= cols) {
+            continue;
+          }
+          nineNeighbors.push(r * cols + c);
+        }
+      }
+
+      if (nineNeighbors.includes(toucanLocation)) {
+        document.getElementById("help").textContent = "caw";
+        return;
+      }
+
+      if (nineNeighbors.includes(statueLocation)) {
+        document.getElementById("help").textContent = "thrrum";
+        return;
+      }
+
+      document.getElementById("help").textContent = "silence";
+    }
+  </script>
 </body>
 </html>
+
