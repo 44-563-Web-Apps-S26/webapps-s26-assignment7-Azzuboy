@@ -31,10 +31,12 @@
     }
 
     function beginTime() {
-      for (let i = 0; i <= 5; i += 1) {
+      haltTime = undefined;
+      const startCount = Math.floor(Math.random() * 9) + 2;
+      for (let i = 0; i <= startCount; i += 1) {
         setTimeout(() => {
           document.getElementById("countdown").innerHTML = i;
-        }, (5 - i) * 1000);
+        }, (startCount - i) * 1000);
       }
 
       setTimeout(() => {
@@ -46,7 +48,7 @@
         const targetTime = Date.now();
         const elapsed = targetTime - haltTime;
         document.getElementById("target").innerHTML = `Time was ${elapsed}`;
-      }, 5000);
+      }, startCount * 1000);
     }
 
     document.getElementById("haltButton").onclick = recordTime;
